@@ -3,9 +3,9 @@
 # <h1 align = "center">BRAC University - Spring 2025</h1>
 Welcome to the GitHub repository for the **Algorithm** course, **CSE221**, at **BRAC University** for the **Spring 2025** semester.
 
-This course is taught in **Language Independent Platform** by our esteemed instructors:
+This course is taught in **Language Independent Platform** by my esteemed instructors:
 - Theory: Mr. Muhammad Ehsanul Kader **(EHD)**
-- Laboratory: Mr. _ **(_)** and Mr. _ **(_)**
+- Laboratory: Mr. Prothito Shovon Majumder **(PSM)** and Mr. Abdullah Khondoker **(AKDR)**
 
 In this Github Repository, it is done in ***JAVA***
 
