@@ -1,21 +1,28 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Array_Reverse {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String first_line = sc.nextLine();
-        String second_line = sc.nextLine();
-        sc.close();
-        String[] first = first_line.split(" ");
-        String[] second = second_line.split(" ");
-        for (int i = 0; i < ((Integer.parseInt(first[0])/2)); i++){
-            String temp = second[i];
-            second[i] = second[second.length-i-1];
-            second[second.length-1-i] = temp;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int totalElements = Integer.parseInt(st.nextToken());
+        int reverseStart = Integer.parseInt(st.nextToken());
+        st = new StringTokenizer(br.readLine());
+        String[] second = new String[totalElements];
+        for (int i = 0; i < totalElements; i++) {
+            second[i] = st.nextToken();
         }
-        for (int i = Integer.parseInt(first[0])-Integer.parseInt(first[1]); i < second.length; i++){
-            System.out.print(second[i]+ " ");
+        
+        for (int i = 0; i < (totalElements / 2); i++) {
+            String temp = second[i];
+            second[i] = second[totalElements - i - 1];
+            second[totalElements - i - 1] = temp;
+        }
+        
+        for (int i = totalElements - reverseStart; i < totalElements; i++) {
+            System.out.print(second[i] + " ");
         }
     }
 }
-// Time Limit is Exceeding due to trash rule of BRACU. KKP and ARD, you guys are going to hell for changing the policy
