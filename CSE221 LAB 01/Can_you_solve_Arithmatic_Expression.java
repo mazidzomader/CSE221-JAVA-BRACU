@@ -10,7 +10,7 @@ public class Can_you_solve_Arithmatic_Expression {
         int input = Integer.parseInt(br.readLine());
         for (int i = 0; i < input; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            st.nextToken(); // Ignore the first token
+            st.nextToken(); 
             float operand_1 = Integer.parseInt(st.nextToken());
             String operator = st.nextToken();
             float operand_2 = Integer.parseInt(st.nextToken());
