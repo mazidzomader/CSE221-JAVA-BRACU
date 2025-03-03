@@ -1,18 +1,27 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Sorting_Again {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         
-        int no_of_students = Integer.parseInt(scanner.nextLine());
-        String[] student_id = scanner.nextLine().split(" ");
-        String[] student_marks = scanner.nextLine().split(" ");
-        int count = 0;
-
-        for (int index = 0; index < no_of_students; index++) {
-            student_id[index] = String.valueOf(Integer.parseInt(student_id[index]));
-            student_marks[index] = String.valueOf(Integer.parseInt(student_marks[index]));
+        int no_of_students = Integer.parseInt(reader.readLine());
+        
+        StringTokenizer st = new StringTokenizer(reader.readLine());
+        String[] student_id = new String[no_of_students];
+        for (int i = 0; i < no_of_students; i++) {
+            student_id[i] = st.nextToken();
         }
+        
+        st = new StringTokenizer(reader.readLine());
+        String[] student_marks = new String[no_of_students];
+        for (int i = 0; i < no_of_students; i++) {
+            student_marks[i] = st.nextToken();
+        }
+
+        int count = 0;
 
         for (int index = 0; index < no_of_students - 1; index++) {
             int minimum_index = index;
@@ -40,8 +49,5 @@ public class Sorting_Again {
         for (int i = 0; i < no_of_students; i++) {
             System.out.println("ID: " + student_id[i] + " Mark: " + student_marks[i]);
         }
-        
-        scanner.close();
     }
 }
-
