@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Collections; 
+
 public class A_Shortest_Path {
     public static int[] Dijkstra(Graph G, int S, int D, int N) {
         int[] dist = new int[N];
